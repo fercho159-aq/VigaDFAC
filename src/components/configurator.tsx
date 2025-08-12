@@ -9,6 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { loadTable, slabThicknesses, beamSeparations, type SlabThickness, type BeamSeparation } from '@/data/habe20-data';
 import { cn } from '@/lib/utils';
 import { Skeleton } from '@/components/ui/skeleton';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 export default function Configurator() {
   const [beamLength, setBeamLength] = useState([2.95]);
@@ -103,30 +104,32 @@ export default function Configurator() {
       <div className="p-6 md:p-8 border-t">
         <h4 className="text-xl font-bold mb-4 font-headline">Tabla de Cargas de Referencia</h4>
         <p className="text-muted-foreground text-sm mb-4">Distancia máxima entre puntales (en metros) según grosor de forjado y separación entre vigas.</p>
-        <div className="overflow-x-auto relative">
-          <Table>
-            <TableHeader>
-              <TableRow className="hover:bg-transparent">
-                <TableHead className="text-left sticky left-0 bg-background/95 backdrop-blur-sm z-10 w-1/4 min-w-[120px]">Forjado (cm)</TableHead>
-                {beamSeparations.map(s => <TableHead key={s} className="text-center">Vigas a {(s/100).toFixed(2)} m</TableHead>)}
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {slabThicknesses.map(t => (
-                <TableRow key={t}>
-                  <TableHead className="font-bold text-left sticky left-0 bg-background/95 backdrop-blur-sm z-10">{t}</TableHead>
-                  {beamSeparations.map(s => (
-                    <TableCell key={s} className={cn("text-center transition-colors duration-300", {
-                      'bg-primary/10 text-primary ring-2 ring-primary font-bold rounded-md': t === slabThickness && s === beamSeparation
-                    })}>
-                      {loadTable[t][s].toFixed(2)}
-                    </TableCell>
-                  ))}
+        <ScrollArea className="h-96">
+          <div className="overflow-x-auto relative">
+            <Table>
+              <TableHeader>
+                <TableRow className="hover:bg-transparent">
+                  <TableHead className="text-left sticky left-0 bg-background/95 backdrop-blur-sm z-10 w-1/4 min-w-[120px]">Forjado (cm)</TableHead>
+                  {beamSeparations.map(s => <TableHead key={s} className="text-center">Vigas a {(s/100).toFixed(2)} m</TableHead>)}
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
+              </TableHeader>
+              <TableBody>
+                {slabThicknesses.map(t => (
+                  <TableRow key={t}>
+                    <TableHead className="font-bold text-left sticky left-0 bg-background/95 backdrop-blur-sm z-10">{t}</TableHead>
+                    {beamSeparations.map(s => (
+                      <TableCell key={s} className={cn("text-center transition-colors duration-300", {
+                        'bg-primary/10 text-primary ring-2 ring-primary font-bold rounded-md': t === slabThickness && s === beamSeparation
+                      })}>
+                        {loadTable[t]?.[s]?.toFixed(2) ?? '-'}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
+        </ScrollArea>
       </div>
     </Card>
   );
