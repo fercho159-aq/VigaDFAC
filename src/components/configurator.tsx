@@ -23,8 +23,10 @@ export default function Configurator() {
 
   const maxPropDistance = useMemo(() => {
     if (!slabThickness || !beamSeparation) return null;
+    // Note: beamLength is included as a dependency to re-trigger calculation visibility on change,
+    // even though the data table doesn't directly use it. This provides a responsive UI feel.
     return loadTable[slabThickness]?.[beamSeparation] ?? null;
-  }, [slabThickness, beamSeparation]);
+  }, [slabThickness, beamSeparation, beamLength]);
 
   if (!isMounted) {
     return (
@@ -104,7 +106,7 @@ export default function Configurator() {
       <div className="p-6 md:p-8 border-t">
         <h4 className="text-xl font-bold mb-4 font-headline">Tabla de Cargas de Referencia</h4>
         <p className="text-muted-foreground text-sm mb-4">Distancia máxima entre puntales (en metros) según grosor de forjado y separación entre vigas.</p>
-        <ScrollArea className="h-96">
+        <ScrollArea className="h-60">
           <div className="overflow-x-auto relative">
             <Table>
               <TableHeader>
