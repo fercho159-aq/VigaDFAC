@@ -12,7 +12,7 @@ const clientLogos = [
 export default function Clients() {
   return (
     <section id="clientes" className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">Nuestros Clientes Confían en Nosotros</h2>
           <p className="max-w-[600px] text-muted-foreground md:text-xl">
