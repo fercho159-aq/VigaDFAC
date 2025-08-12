@@ -157,13 +157,13 @@ export default function Configurator() {
             <div className="w-full max-w-xs flex flex-col items-center justify-center space-y-2">
                 {/* 2D Beam Representation */}
                 <div className="w-full h-20 flex items-center justify-center">
-                    <div className="relative h-12 flex items-center justify-center transition-all duration-300 ease-out" style={{ width: `${beamScale * 100}%`}}>
+                    <div className="relative h-16 flex items-center justify-center transition-all duration-300 ease-out" style={{ width: `${beamScale * 100}%`}}>
                         {/* Top flange */}
-                        <div className="absolute top-0 h-2 w-full bg-primary-foreground/50 rounded-t-sm"></div>
+                        <div className="absolute top-0 h-4 w-full bg-primary-foreground/50 rounded-t-sm"></div>
                         {/* Web */}
-                        <div className="h-full w-2 bg-primary-foreground/50"></div>
+                        <div className="h-full w-2 bg-primary-foreground/50 mx-auto"></div>
                         {/* Bottom flange */}
-                        <div className="absolute bottom-0 h-2 w-full bg-primary-foreground/50 rounded-b-sm"></div>
+                        <div className="absolute bottom-0 h-4 w-full bg-primary-foreground/50 rounded-b-sm"></div>
                     </div>
                 </div>
 
