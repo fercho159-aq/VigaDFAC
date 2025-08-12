@@ -9,9 +9,9 @@ import Footer from '@/components/sections/footer';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-dvh bg-background">
+    <div className="flex flex-col min-h-dvh bg-background items-center">
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow w-full">
         <Hero />
         <About />
         <Specifications />

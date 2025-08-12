@@ -43,7 +43,7 @@ export default function Header() {
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium ml-auto">
           <NavLinks />
         </nav>
-        <div className="flex items-center justify-end space-x-4 md:ml-6">
+        <div className="flex items-center justify-end md:ml-6">
           <Button asChild className='hidden sm:inline-flex'>
             <a href="#contacto">Solicitar Cotización</a>
           </Button>

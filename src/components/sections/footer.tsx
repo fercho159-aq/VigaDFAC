@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t">
+      <div className="border-t w-full">
         <div className="container py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground gap-2">
           <p>&copy; {new Date().getFullYear()} DFAC Accesorios para Cimbras. Todos los derechos reservados.</p>
           <Link href="#" className="hover:text-primary transition-colors">Política de Privacidad</Link>
