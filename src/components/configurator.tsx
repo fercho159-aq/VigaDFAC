@@ -4,7 +4,6 @@ import { useState, useMemo, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
-import { Slider } from '@/components/ui/slider';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { loadTable, slabThicknesses, beamSeparations, type SlabThickness, type BeamSeparation } from '@/data/habe20-data';
 import { cn } from '@/lib/utils';
@@ -12,7 +11,6 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 export default function Configurator() {
-  const [beamLength, setBeamLength] = useState([2.95]);
   const [slabThickness, setSlabThickness] = useState<SlabThickness>(20);
   const [beamSeparation, setBeamSeparation] = useState<BeamSeparation>(75);
   const [isMounted, setIsMounted] = useState(false);
@@ -46,19 +44,6 @@ export default function Configurator() {
           <h3 className="text-2xl font-bold font-headline">Parámetros de Cálculo</h3>
           
           <div className="space-y-4 pt-4">
-            <Label htmlFor="beam-length">Longitud de Viga (m)</Label>
-            <Slider
-              id="beam-length"
-              min={1.95}
-              max={5.90}
-              step={0.05}
-              value={beamLength}
-              onValueChange={setBeamLength}
-            />
-            <p className="text-right text-sm text-muted-foreground font-medium">{beamLength[0].toFixed(2)} m</p>
-          </div>
-
-          <div className="space-y-4">
             <Label htmlFor="slab-thickness">Grosor del Forjado (cm)</Label>
             <Select onValueChange={(val) => setSlabThickness(Number(val) as SlabThickness)} defaultValue={String(slabThickness)}>
               <SelectTrigger id="slab-thickness" className="w-full">
