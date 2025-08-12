@@ -23,10 +23,8 @@ export default function Configurator() {
 
   const maxPropDistance = useMemo(() => {
     if (!slabThickness || !beamSeparation) return null;
-    // Note: beamLength is included as a dependency to re-trigger calculation visibility on change,
-    // even though the data table doesn't directly use it. This provides a responsive UI feel.
     return loadTable[slabThickness]?.[beamSeparation] ?? null;
-  }, [slabThickness, beamSeparation, beamLength]);
+  }, [slabThickness, beamSeparation]);
 
   if (!isMounted) {
     return (
