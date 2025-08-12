@@ -62,6 +62,18 @@ export default function Configurator() {
       setPrimaryBeamDistance(numValue);
     }
   };
+  
+  const selectedPrimaryBeamDistance = primaryBeamDistance ?? nearestPrimaryBeamDistance;
+  const minPrimaryBeamDistance = Math.min(...primaryBeamDistances);
+  const maxPrimaryBeamDistanceValue = Math.max(...primaryBeamDistances);
+
+  const beamScale = useMemo(() => {
+    if (!selectedPrimaryBeamDistance) return 0.5;
+    // Normalize the distance from 0 to 1
+    const normalized = (selectedPrimaryBeamDistance - minPrimaryBeamDistance) / (maxPrimaryBeamDistanceValue - minPrimaryBeamDistance);
+    // Scale from 0.4 to 1 for visual representation
+    return 0.4 + normalized * 0.6;
+  }, [selectedPrimaryBeamDistance, minPrimaryBeamDistance, maxPrimaryBeamDistanceValue]);
 
 
   if (!isMounted) {
@@ -139,20 +151,35 @@ export default function Configurator() {
                 )}
           </div>
         </div>
-
-        <div className="p-6 md:p-8 flex flex-col items-center justify-center bg-primary text-primary-foreground space-y-4">
-            <div className="text-center">
-                <h4 className="text-lg font-medium text-primary-foreground/80">Distancia Máxima entre Puntales</h4>
-                 <div className="bg-primary-foreground/10 rounded-full p-4 flex items-center justify-center w-40 h-40 md:w-48 md:h-48 border-4 border-primary-foreground/20 mt-2">
-                    <div className="text-center">
-                        <div key={maxPropDistance} className="text-5xl md:text-6xl font-bold tracking-tighter animate-in fade-in duration-500">
-                        {maxPropDistance ? maxPropDistance.toFixed(2) : '-.--'}
-                        </div>
-                        <div className="text-lg text-primary-foreground/80">metros</div>
+        
+        <div className="p-6 md:p-8 flex flex-col items-center justify-center bg-primary text-primary-foreground space-y-4 min-h-[300px]">
+            <h4 className="text-lg font-medium text-primary-foreground/80 mb-4">Distancia Máxima entre Puntales</h4>
+            <div className="w-full max-w-xs flex flex-col items-center justify-center space-y-2">
+                {/* 2D Beam Representation */}
+                <div className="w-full h-20 flex items-center justify-center">
+                    <div className="relative h-12 flex items-center justify-center transition-all duration-300 ease-out" style={{ width: `${beamScale * 100}%`}}>
+                        {/* Top flange */}
+                        <div className="absolute top-0 h-2 w-full bg-primary-foreground/50 rounded-t-sm"></div>
+                        {/* Web */}
+                        <div className="h-full w-2 bg-primary-foreground/50"></div>
+                        {/* Bottom flange */}
+                        <div className="absolute bottom-0 h-2 w-full bg-primary-foreground/50 rounded-b-sm"></div>
                     </div>
                 </div>
+
+                 <div className="relative text-center -mt-2">
+                     <div key={maxPropDistance} className="text-5xl md:text-6xl font-bold tracking-tighter animate-in fade-in duration-500">
+                        {maxPropDistance ? maxPropDistance.toFixed(2) : '-.--'}
+                     </div>
+                     <div className="text-lg text-primary-foreground/80">metros</div>
+                </div>
             </div>
+             <div className="text-center mt-4">
+                <p className="text-sm text-primary-foreground/80">Distancia Viga Primaria Seleccionada</p>
+                <p className="font-bold text-lg">{selectedPrimaryBeamDistance?.toFixed(2) ?? '-.--'} m</p>
+             </div>
         </div>
+
       </div>
        <div className="p-6 md:p-8 border-t">
         <h4 className="text-xl font-bold mb-4 font-headline">Tabla de Referencia Completa</h4>
