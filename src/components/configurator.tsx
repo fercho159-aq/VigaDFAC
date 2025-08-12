@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils';
 import { Skeleton } from '@/components/ui/skeleton';
 
 export default function Configurator() {
-  const [beamLength, setBeamLength] = useState([2950]);
+  const [beamLength, setBeamLength] = useState([2.95]);
   const [slabThickness, setSlabThickness] = useState<SlabThickness>(20);
   const [beamSeparation, setBeamSeparation] = useState<BeamSeparation>(70);
   const [isMounted, setIsMounted] = useState(false);
@@ -45,16 +45,16 @@ export default function Configurator() {
           <h3 className="text-2xl font-bold font-headline">Parámetros de Cálculo</h3>
           
           <div className="space-y-4 pt-4">
-            <Label htmlFor="beam-length">Longitud de Viga (mm)</Label>
+            <Label htmlFor="beam-length">Longitud de Viga (m)</Label>
             <Slider
               id="beam-length"
-              min={1950}
-              max={5900}
-              step={100}
+              min={1.95}
+              max={5.90}
+              step={0.05}
               value={beamLength}
               onValueChange={setBeamLength}
             />
-            <p className="text-right text-sm text-muted-foreground font-medium">{beamLength[0]} mm</p>
+            <p className="text-right text-sm text-muted-foreground font-medium">{beamLength[0].toFixed(2)} m</p>
           </div>
 
           <div className="space-y-4">
