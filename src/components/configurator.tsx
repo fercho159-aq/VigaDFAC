@@ -13,7 +13,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 export default function Configurator() {
   const [beamLength, setBeamLength] = useState([2.95]);
   const [slabThickness, setSlabThickness] = useState<SlabThickness>(20);
-  const [beamSeparation, setBeamSeparation] = useState<BeamSeparation>(70);
+  const [beamSeparation, setBeamSeparation] = useState<BeamSeparation>(75);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -79,7 +79,7 @@ export default function Configurator() {
               </SelectTrigger>
               <SelectContent>
                 {beamSeparations.map(s => (
-                  <SelectItem key={s} value={String(s)}>{s} cm</SelectItem>
+                  <SelectItem key={s} value={String(s)}>{(s/100).toFixed(2)} m</SelectItem>
                 ))}
               </SelectContent>
             </Select>
@@ -107,8 +107,8 @@ export default function Configurator() {
           <Table>
             <TableHeader>
               <TableRow className="hover:bg-transparent">
-                <TableHead className="text-left sticky left-0 bg-background/95 backdrop-blur-sm z-10 w-1/4">Forjado (cm)</TableHead>
-                {beamSeparations.map(s => <TableHead key={s} className="text-center">Vigas a {s} cm</TableHead>)}
+                <TableHead className="text-left sticky left-0 bg-background/95 backdrop-blur-sm z-10 w-1/4 min-w-[120px]">Forjado (cm)</TableHead>
+                {beamSeparations.map(s => <TableHead key={s} className="text-center">Vigas a {(s/100).toFixed(2)} m</TableHead>)}
               </TableRow>
             </TableHeader>
             <TableBody>
