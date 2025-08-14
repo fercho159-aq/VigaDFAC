@@ -5,7 +5,7 @@ import { Facebook, Linkedin, Instagram } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="w-full border-t bg-background">
-      <div className="container grid grid-cols-1 md:grid-cols-3 gap-8 py-12">
+      <div className="container grid grid-cols-1 md:grid-cols-3 gap-8 py-12 mx-auto">
         <div className="space-y-4">
           <DfacLogo />
           <p className="text-sm text-muted-foreground max-w-xs">
@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t w-full">
-        <div className="container py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground gap-2">
+        <div className="container py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground gap-2 mx-auto">
           <p>&copy; {new Date().getFullYear()} DFAC Accesorios para Cimbras. Todos los derechos reservados.</p>
           <Link href="#" className="hover:text-primary transition-colors">Política de Privacidad</Link>
         </div>
