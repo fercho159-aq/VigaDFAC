@@ -161,7 +161,7 @@ export default function Configurator() {
                         {/* Top flange */}
                         <div className="absolute top-0 h-4 w-full bg-yellow-400 rounded-t-sm"></div>
                         {/* Web */}
-                        <div className="h-full w-4 bg-yellow-400 mx-auto"></div>
+                        <div className="h-full w-12 bg-yellow-400 mx-auto"></div>
                         {/* Bottom flange */}
                         <div className="absolute bottom-0 h-4 w-full bg-yellow-400 rounded-b-sm"></div>
                     </div>
