@@ -3,7 +3,6 @@ import Hero from '@/components/sections/hero';
 import About from '@/components/sections/about';
 import Specifications from '@/components/sections/specifications';
 import Advantages from '@/components/sections/advantages';
-import Clients from '@/components/sections/clients';
 import Cta from '@/components/sections/cta';
 import Footer from '@/components/sections/footer';
 import FloatingButtons from '@/components/floating-buttons';
@@ -17,7 +16,6 @@ export default function Home() {
         <About />
         <Specifications />
         <Advantages />
-        <Clients />
         <Cta />
       </main>
       <Footer />

@@ -19,9 +19,6 @@ const NavLinks = ({ inSheet = false }: { inSheet?: boolean }) => {
       <NavLink href="#ventajas" className="text-sm font-medium hover:text-primary transition-colors py-2">
         Ventajas
       </NavLink>
-      <NavLink href="#clientes" className="text-sm font-medium hover:text-primary transition-colors py-2">
-        Clientes
-      </NavLink>
     </>
   );
 }
