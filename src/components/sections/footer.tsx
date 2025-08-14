@@ -19,7 +19,7 @@ export default function Footer() {
             <li><a href="tel:5541673745" className="hover:text-primary transition-colors">55-4167-3745</a></li>
             <li><a href="tel:5555715084" className="hover:text-primary transition-colors">55-5571-5084</a></li>
             <li><a href="mailto:ventas@cimbrayaccesorios.com.mx" className="hover:text-primary transition-colors">ventas@cimbrayaccesorios.com.mx</a></li>
-            <li>Dirección de la empresa, Ciudad, CP.</li>
+            <li>Cuauhtémoc 105, San Pedro Iztacalco, Iztacalco, 08220 Ciudad de México, CDMX</li>
           </ul>
         </div>
         <div className="space-y-2">
