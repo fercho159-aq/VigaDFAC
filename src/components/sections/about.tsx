@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 
 export default function About() {
   return (
@@ -14,14 +14,13 @@ export default function About() {
               </p>
             </div>
           </div>
-          <Image
-            src="https://placehold.co/600x400.png"
-            data-ai-hint="construction site"
-            width={600}
-            height={400}
-            alt="Sobre DFAC"
-            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-          />
+          <div className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full">
+            <video
+              src="https://dfacpuntales.netlify.app/videos/VIDEO-2025-08-05-12-37-33.mp4"
+              controls
+              className="w-full h-full"
+            />
+          </div>
         </div>
       </div>
     </section>
