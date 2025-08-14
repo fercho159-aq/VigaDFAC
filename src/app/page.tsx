@@ -6,6 +6,7 @@ import Advantages from '@/components/sections/advantages';
 import Clients from '@/components/sections/clients';
 import Cta from '@/components/sections/cta';
 import Footer from '@/components/sections/footer';
+import FloatingButtons from '@/components/floating-buttons';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Cta />
       </main>
       <Footer />
+      <FloatingButtons />
     </div>
   );
 }
