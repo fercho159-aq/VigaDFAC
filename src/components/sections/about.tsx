@@ -17,8 +17,11 @@ export default function About() {
           <div className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full">
             <video
               src="https://dfacpuntales.netlify.app/videos/VIDEO-2025-08-05-12-37-33.mp4"
-              controls
-              className="w-full h-full"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
