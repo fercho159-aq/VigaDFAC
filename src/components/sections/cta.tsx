@@ -1,5 +1,13 @@
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogDescription, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogTrigger,
+  DialogFooter
+} from '@/components/ui/dialog';
 import { Phone, MessageCircle } from 'lucide-react';
 
 export default function Cta() {
@@ -12,42 +20,44 @@ export default function Cta() {
             Contacte a nuestro equipo de ventas para obtener una cotización personalizada y asesoramiento técnico para su proyecto.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 items-start">
-          <Card className="mx-auto max-w-md w-full">
-            <CardHeader>
-              <CardTitle>Solicite su Cotización</CardTitle>
-              <CardDescription>
-                <p>01 (55) 2598-9751</p>
-                <p>01 (55) 4167-3745</p>
-                <p>01 (55) 5571-5084</p>
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <Button className="w-full" size="lg" asChild>
-                <a href="tel:5525989751">
-                  <Phone className="mr-2 h-4 w-4" />
-                  Llamar Ahora
-                </a>
-              </Button>
-              <Button variant="outline" className="w-full" size="lg" asChild>
-                <a href="https://wa.me/5215549414017" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="mr-2 h-4 w-4" />
-                  Enviar WhatsApp
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
-          <div className="w-full h-full min-h-[300px] md:min-h-full rounded-lg overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.142348540244!2d-99.1025816850937!3d19.40634698689973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc156637d77b%3A0x4e6c35064516a72e!2sCuauht%C3%A9moc%20105%2C%20San%20Pedro%20Iztacalco%2C%20Iztacalco%2C%2008220%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1sen!2smx!4v1700000000000!5m2!1sen!2smx"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+        <div className="flex justify-center">
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" className="text-lg px-8 py-6">Solicitar Cotización</Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                  <DialogTitle>Contacto de Ventas</DialogTitle>
+                  <DialogDescription>
+                    Póngase en contacto con nosotros a través de los siguientes medios.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-4 py-4">
+                  <div className="flex flex-col space-y-2">
+                    <p className="font-semibold">Números de teléfono:</p>
+                    <ul className="list-disc list-inside text-muted-foreground">
+                        <li>01 (55) 2598-9751</li>
+                        <li>01 (55) 4167-3745</li>
+                        <li>01 (55) 5571-5084</li>
+                    </ul>
+                  </div>
+                </div>
+                <DialogFooter className="sm:justify-start flex-col sm:flex-col sm:space-x-0 space-y-2">
+                   <Button asChild>
+                    <a href="tel:5525989751">
+                      <Phone className="mr-2 h-4 w-4" />
+                      Llamar Ahora
+                    </a>
+                  </Button>
+                  <Button variant="secondary" asChild>
+                     <a href="https://wa.me/5215549414017" target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="mr-2 h-4 w-4" />
+                      Enviar WhatsApp
+                    </a>
+                  </Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
         </div>
       </div>
     </section>
