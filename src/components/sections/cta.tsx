@@ -27,7 +27,7 @@ export default function Cta() {
               </a>
             </Button>
             <Button variant="outline" className="w-full" size="lg" asChild>
-              <a href="https://wa.me/5215525989751" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5215549414017" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-4 w-4" />
                 Enviar WhatsApp
               </a>
