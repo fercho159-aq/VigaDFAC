@@ -15,7 +15,9 @@ export default function Footer() {
         <div className="space-y-2">
           <h4 className="font-semibold">Contacto</h4>
           <ul className="space-y-1 text-sm text-muted-foreground">
-            <li><a href="tel:+525512345678" className="hover:text-primary transition-colors">+52 55 1234 5678</a></li>
+            <li><a href="tel:5525989751" className="hover:text-primary transition-colors">55-2598-9751</a></li>
+            <li><a href="tel:5541673745" className="hover:text-primary transition-colors">55-4167-3745</a></li>
+            <li><a href="tel:5555715084" className="hover:text-primary transition-colors">55-5571-5084</a></li>
             <li><a href="mailto:ventas@dfac.com" className="hover:text-primary transition-colors">ventas@dfac.com</a></li>
             <li>Dirección de la empresa, Ciudad, CP.</li>
           </ul>

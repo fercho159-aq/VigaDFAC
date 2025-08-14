@@ -15,17 +15,19 @@ export default function Cta() {
         <Card className="mx-auto max-w-md w-full mt-6">
           <CardHeader>
             <CardTitle>Solicite su Cotización</CardTitle>
-            <CardDescription>Estamos listos para ayudarle.</CardDescription>
+            <CardDescription>
+              Teléfonos: 55-2598-9751 | 55-4167-3745 | 55-5571-5084
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <Button className="w-full" size="lg" asChild>
-              <a href="tel:+525512345678">
+              <a href="tel:+525525989751">
                 <Phone className="mr-2 h-4 w-4" />
                 Llamar Ahora
               </a>
             </Button>
             <Button variant="outline" className="w-full" size="lg" asChild>
-              <a href="https://wa.me/525512345678" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5215525989751" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-4 w-4" />
                 Enviar WhatsApp
               </a>
