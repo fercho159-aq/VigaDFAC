@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { DfacLogo } from "@/components/icons/dfac-logo";
-import { Facebook, Linkedin, Instagram } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -25,13 +25,10 @@ export default function Footer() {
         <div className="space-y-2">
           <h4 className="font-semibold">Síganos</h4>
           <div className="flex space-x-4">
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="https://www.facebook.com/bandasdepvcymonosparacimbra" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Facebook className="h-6 w-6" />
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin className="h-6 w-6" />
-            </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="https://www.instagram.com/dfac_cimbra/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Instagram className="h-6 w-6" />
             </Link>
           </div>
