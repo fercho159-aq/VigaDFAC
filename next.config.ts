@@ -21,6 +21,12 @@ const nextConfig: NextConfig = {
         hostname: 'cimbrayaccesorios.com.mx',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.mediafacile.net',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

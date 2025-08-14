@@ -13,7 +13,7 @@ const slides = [
     title: "Viga HABE-20: Potencia y Versatilidad para sus Encofrados",
     description: "Nuestra viga de madera de alta resistencia es la solución ideal para sistemas de encofrado, ofreciendo durabilidad, ligereza y una capacidad de carga excepcional.",
     image: {
-      src: "https://placehold.co/1200x600.png",
+      src: "https://www.mediafacile.net/edifacilecom/0/0/4/4042-1-101987-20230926085429-b.jpg",
       hint: "construction beams",
       alt: "Vigas HABE-20",
     },
@@ -26,7 +26,7 @@ const slides = [
     title: "Innovación y Calidad en Cada Proyecto",
     description: "Comprometidos con la excelencia, ofrecemos productos que superan los estándares de la industria para garantizar la seguridad y eficiencia en su obra.",
     image: {
-      src: "https://placehold.co/1200x600.png",
+      src: "https://www.mediafacile.net/edifacilecom/0/0/4/4045-1-101987-20230926085429-b.jpg",
       hint: "construction site planning",
       alt: "Planos de construcción",
     },
@@ -39,7 +39,7 @@ const slides = [
     title: "Soluciones a la Medida de sus Necesidades",
     description: "Nuestro equipo de expertos está listo para asesorarle y proveerle las mejores soluciones de encofrado para optimizar sus resultados.",
     image: {
-      src: "https://placehold.co/1200x600.png",
+      src: "https://www.mediafacile.net/edifacilecom/0/0/4/4037-1-101987-20230926085429-b.jpg",
       hint: "construction workers team",
       alt: "Equipo de construcción",
     },
