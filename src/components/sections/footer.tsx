@@ -18,7 +18,7 @@ export default function Footer() {
             <li><a href="tel:5525989751" className="hover:text-primary transition-colors">55-2598-9751</a></li>
             <li><a href="tel:5541673745" className="hover:text-primary transition-colors">55-4167-3745</a></li>
             <li><a href="tel:5555715084" className="hover:text-primary transition-colors">55-5571-5084</a></li>
-            <li><a href="mailto:ventas@dfac.com" className="hover:text-primary transition-colors">ventas@dfac.com</a></li>
+            <li><a href="mailto:ventas@cimbrayaccesorios.com.mx" className="hover:text-primary transition-colors">ventas@cimbrayaccesorios.com.mx</a></li>
             <li>Dirección de la empresa, Ciudad, CP.</li>
           </ul>
         </div>
