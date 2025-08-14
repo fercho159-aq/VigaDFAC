@@ -68,16 +68,16 @@ export default function Hero() {
                   priority={index === 0}
                 />
                 <div className="absolute inset-0 bg-black/60" />
-                <div className="absolute inset-0 flex items-center justify-start text-white">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
                   <div className="container mx-auto px-4 md:px-6">
-                    <div className="max-w-2xl text-left space-y-4">
+                    <div className="max-w-2xl mx-auto space-y-4">
                       <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline">
                         {slide.title}
                       </h1>
                       <p className="text-lg md:text-xl text-white/90">
                         {slide.description}
                       </p>
-                       <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
+                       <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4 justify-center">
                         {slide.buttons.map((button, btnIndex) => (
                           <Button key={btnIndex} asChild size="lg" variant={button.variant} 
                             className={button.variant === 'outline' ? 'border-white text-white bg-transparent hover:bg-white hover:text-primary' : ''}>
