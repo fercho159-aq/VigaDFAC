@@ -159,11 +159,11 @@ export default function Configurator() {
                 <div className="w-full h-20 flex items-center justify-center">
                     <div className="relative h-16 flex items-center justify-center transition-all duration-300 ease-out" style={{ width: `${beamScale * 100}%`}}>
                         {/* Top flange */}
-                        <div className="absolute top-0 h-4 w-full bg-primary-foreground/50 rounded-t-sm"></div>
+                        <div className="absolute top-0 h-4 w-full bg-yellow-400 rounded-t-sm"></div>
                         {/* Web */}
-                        <div className="h-full w-2 bg-primary-foreground/50 mx-auto"></div>
+                        <div className="h-full w-4 bg-yellow-400 mx-auto"></div>
                         {/* Bottom flange */}
-                        <div className="absolute bottom-0 h-4 w-full bg-primary-foreground/50 rounded-b-sm"></div>
+                        <div className="absolute bottom-0 h-4 w-full bg-yellow-400 rounded-b-sm"></div>
                     </div>
                 </div>
 
