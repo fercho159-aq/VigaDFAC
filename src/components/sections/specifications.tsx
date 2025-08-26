@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
+import { Truck } from 'lucide-react';
 
 export default function Specifications() {
   return (
@@ -12,10 +13,10 @@ export default function Specifications() {
               Producto Destacado
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
-              Viga H20 para Cimbra
+              Viga H-20 para Cimbra
             </h2>
             <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Nuestra viga H20 de madera de alta resistencia es la solución ideal para sistemas de encofrado, ofreciendo durabilidad, ligereza y una capacidad de carga excepcional.
+              Nuestra viga H-20 de madera de alta resistencia es la solución ideal para sistemas de encofrado, ofreciendo durabilidad, ligereza y una capacidad de carga excepcional.
             </p>
           </div>
         </div>
@@ -38,8 +39,12 @@ export default function Specifications() {
                   </CardHeader>
                   <CardContent className="p-0 space-y-4">
                     <p className="text-muted-foreground">
-                      Fabricada con madera de alta calidad y un diseño robusto, nuestra viga H20 garantiza la máxima eficiencia y seguridad en sus proyectos de construcción. El tapón protector integrado aumenta su durabilidad.
+                      Fabricada con madera de alta calidad y un diseño robusto, nuestra viga H-20 garantiza la máxima eficiencia y seguridad en sus proyectos de construcción. El tapón protector integrado aumenta su durabilidad.
                     </p>
+                     <div className="flex items-center gap-2 text-sm font-semibold text-primary">
+                      <Truck className="h-5 w-5" />
+                      <span>Entrega en menos de 24hrs en CDMX y Zona Metropolitana.</span>
+                    </div>
                     <div className="flex flex-col space-y-1 text-sm">
                         <span className="font-semibold">Dimensiones:</span>
                         <span>3.90m (largo) x 0.20m (alto) x 0.04m (ancho)</span>

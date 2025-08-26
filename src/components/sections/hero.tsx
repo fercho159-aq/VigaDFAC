@@ -11,14 +11,14 @@ import {
 const slides = [
   {
     title: "Viga H-20: Potencia y Versatilidad para sus Encofrados",
-    description: "Nuestra viga de madera de alta resistencia es la solución ideal para sistemas de encofrado, ofreciendo durabilidad, ligereza y una capacidad de carga excepcional.",
+    description: "Nuestra viga de madera de alta resistencia es la solución ideal para sistemas de encofrado, ofreciendo durabilidad, ligereza y una capacidad de carga excepcional. ¡Entregamos en menos de 24 horas en CDMX y Zona Metropolitana!",
     image: {
       src: "https://www.mediafacile.net/edifacilecom/0/0/4/4042-1-101987-20230926085429-b.jpg",
       hint: "construction beams",
       alt: "Vigas H-20",
     },
     buttons: [
-      { text: "Ir al Configurador", href: "#especificaciones", variant: "default" as const },
+      { text: "Ver Producto", href: "#especificaciones", variant: "default" as const },
       { text: "Contactar Ventas", href: "#contacto", variant: "outline" as const },
     ],
   },
