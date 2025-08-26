@@ -10,12 +10,12 @@ import {
 
 const slides = [
   {
-    title: "Viga HABE-20: Potencia y Versatilidad para sus Encofrados",
+    title: "Viga H-20: Potencia y Versatilidad para sus Encofrados",
     description: "Nuestra viga de madera de alta resistencia es la solución ideal para sistemas de encofrado, ofreciendo durabilidad, ligereza y una capacidad de carga excepcional.",
     image: {
       src: "https://www.mediafacile.net/edifacilecom/0/0/4/4042-1-101987-20230926085429-b.jpg",
       hint: "construction beams",
-      alt: "Vigas HABE-20",
+      alt: "Vigas H-20",
     },
     buttons: [
       { text: "Ir al Configurador", href: "#especificaciones", variant: "default" as const },

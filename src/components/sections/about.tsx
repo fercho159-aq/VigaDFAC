@@ -10,7 +10,7 @@ export default function About() {
               <div className="inline-block rounded-lg bg-primary/10 text-primary px-3 py-1 text-sm font-medium">Nosotros</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">DFAC Accesorios para Cimbras</h2>
               <p className="max-w-[600px] text-muted-foreground md:text-lg">
-                Con años de experiencia en el sector de la construcción, en DFAC nos especializamos en proveer accesorios para cimbra de la más alta calidad. Nuestro compromiso es ofrecer productos innovadores y eficientes, como la viga HABE-20, que garantizan la seguridad y productividad en cada obra.
+                Con años de experiencia en el sector de la construcción, en DFAC nos especializamos en proveer accesorios para cimbra de la más alta calidad. Nuestro compromiso es ofrecer productos innovadores y eficientes, como la viga H-20, que garantizan la seguridad y productividad en cada obra.
               </p>
             </div>
           </div>

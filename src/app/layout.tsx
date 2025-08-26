@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Configurador HABE-20 | DFAC',
-  description: 'Configure y calcule la viga HABE-20 para sus proyectos. Optimice la distancia entre puntales y conozca las especificaciones técnicas.',
+  title: 'Viga H-20 | DFAC',
+  description: 'Configure y calcule la viga H-20 para sus proyectos. Optimice la distancia entre puntales y conozca las especificaciones técnicas.',
 };
 
 export default function RootLayout({
